@@ -20,15 +20,10 @@ async function handleRequest(request: Request): Promise<Response> {
     });
   }
 
+  const file = await Deno.readFile("./index.html");
+
   return new Response(
-    `<html>
-      <head>
-        <link rel="stylesheet" href="style.css" />
-      </head>
-      <body>
-        <h1>Example</h1>
-      </body>
-    </html>`,
+    file,
     {
       headers: {
         "content-type": "text/html; charset=utf-8",
