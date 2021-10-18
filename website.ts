@@ -19,7 +19,7 @@ const text = `
 `;
 
 await listenAndServe(":8080", (_req) => {
-  return new Response("Hello World!", {
-    headers: { "content-type": "text/plain" },
+  return new Response(text, {
+    headers: { "content-type": "text/html" },
   });
 });
