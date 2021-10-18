@@ -9,7 +9,7 @@ const text = `
   <title>Joey</title>
   <head>
     <style>
-      .h1 { backround: green}
+      h1 { backround: green}
     </style>
   </head>
   <body>
